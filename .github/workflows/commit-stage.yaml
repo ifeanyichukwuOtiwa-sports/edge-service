@@ -1,7 +1,11 @@
 name: Commit Stage
 on:
   push:
-    paths-ignore: ['my-java-image/**']
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - develop
 
 env:
   REGISTRY: ghcr.io
